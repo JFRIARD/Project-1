@@ -1,0 +1,204 @@
+body, html {
+    background:#3E4C5E;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .container {
+    background: #222;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+    border-radius: 14px;
+    padding-bottom: 20px;
+    width: 320px;
+    
+    }
+    .display {
+    width: 100%;
+    height: 60px;
+    padding: 40px 0;
+    background:#222;
+    box-shadow:inset 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    }
+    .buttons {
+    padding: 20px 20px 0 20px;
+    }
+    .row {
+    width: 280px;
+    float: left;
+   }
+    input[type=button] {
+    width: 60px;
+    height: 60px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    line-height: 30px;
+    outline:none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #5E5858;
+    cursor: pointer; 
+    transition:0.1s;
+    }
+    input[type=button]:hover{
+    background:white;
+    color:#000;
+    font-size:2.4rem;
+    box-shadow:0 0 10px 5px white;
+    }
+    
+    input[type=text] {
+    width: 270px;
+    height: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+    font-size:35px;
+    margin-left:18px;
+    color:#ffffff;
+    background:transparent;
+    padding-left:5%;
+    border-radius:10px;
+    outline:none;
+    border:none;
+    }
+    #equal-el,
+    #del{
+     height:60px;
+     color:white;
+     width:46%;
+     background-color:#333;
+     border-radius:15px;
+    }
+    
+    
+   .row .red{
+      background-color:#333;
+      color:white;
+    }
+    
+    .clockdate-wrapper {
+      background-color: #333;
+      padding:25px;
+      max-width:350px;
+      width:100%;
+      text-align:center;
+      border-radius:5px;
+      margin:0 auto;
+    
+  }
+  #clock{
+      background-color:#333;
+      font-family: sans-serif;
+      font-size:60px;
+      text-shadow:0px 0px 1px #fff;
+      color:#fff;
+  }
+  #clock span {
+      color:#888;
+      text-shadow:0px 0px 1px #333;
+      font-size:50px;
+      position:relative;
+      top:-5px;
+      left:10px;
+  }
+  #date {
+      letter-spacing:3px;
+      font-size:14px;
+      font-family:arial,sans-serif;
+      color:#fff;
+  }
+  #container1 {
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+  }
+  #containerCalcHono {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    border: solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+  }
+  #containerCalcHono input {
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border: NONE;
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+  }
+  #containerCalcHono button {
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px ;
+    transition: 0.5s;
+    font-weight: bold;
+    color: #333;
+
+  }
+  #resultat {
+    color: white;
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #containerCalcHono button:hover {
+    box-shadow:0px 0px 3px 3px white;
+  }
+#firstHalf {
+  height: 50%;
+  border-bottom: solid #333;
+}
+#secondHalf {
+  height: 50%;
+  padding-top: 10px;
+}
+#result {
+  color: white;
+}
+/*BREAKPOINT*/
+@media only screen and (max-width: 600px) {
+  #container1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px;
+    align-items: center;
+  }
+  #containerCalcHono {
+    top: 0px;
+    left: 0px;
+    width: 350px;
+    padding: 10px;
+    margin: 5px;
+  }
+  .clockdate-wrapper {
+    width: 87%;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { 
+  -moz-appearance: textfield;
+}

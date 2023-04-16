@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./statics/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <script src="./java/index.js"></script>
+</head>
+<body onload="startTime()">
+  <div id="container1">
+    <div id="containerCalcHono">
+      <div id="firstHalf">
+  <form id="form1">
+    <label for="valeur_bien">Valeur du bien :</label>
+    <input type="number" name="valeur_bien" id="valeur_bien" value="" placeholder="€" required><br>
+
+    <label for="taux_commission">Taux de commission :</label>
+    <input type="number" name="taux_commission" id="taux_commission" value="" placeholder="%" required><br>
+
+    <button type="submit" onclick="calculer(event)">Calculer</button>
+</form>
+<div id="resultat"></div>
+</div>
+<div id="secondHalf">
+  <form id="form2">
+  <label for="valeur_all">Montant global :</label>
+  <input type="number" name="valeur_all" id="valeur_all" value="" placeholder="€" required><br>
+  <button type="submit" onclick="calcul(event)">Calculer</button>
+</form>
+<div id="result"></div>
+</div>
+</div>
+  <!--date/time clock-->
+  <div id="clockdate">
+    <div class="clockdate-wrapper">
+      <div id="clock"></div>
+      <div id="date"></div>
+    </div>
+  </div>
+  <!--first calculator-->
+    <div class="container">
+    <form id="calcForm">
+    <div class="display">
+    <input type="text" placeholder="" name="displayResult">
+    </div>
+    <div class="buttons">
+      <div class="row">
+      <input type="button" name="bc" value="Cl" onClick="Clear()" id="equal-el">
+      <input type="button" name="del" value="Del" onClick="Delet()" id="del"><br>
+    <input type="button" name="b7" value="7" onClick="calcNumbers(b7.value)">
+      <input type="button" name="b8" value="8" onClick="calcNumbers(b8.value)">
+      <input type="button" name="b9" value="9" onClick="calcNumbers(b9.value)">
+      <input type="button" name="addb" value="+" onClick="calcNumbers(addb.value)">
+    </div>
+    
+    <div class="row">
+    <input type="button" name="b4" value="4" onClick="calcNumbers(b4.value)">
+      <input type="button" name="b5" value="5" onClick="calcNumbers(b5.value)">
+      <input type="button" name="b6" value="6" onClick="calcNumbers(b6.value)">
+      <input type="button" name="subb" value="-" onClick="calcNumbers(subb.value)">
+    </div>
+    
+    <div class="row">
+    <input type="button" name="b1" value="1" onClick="calcNumbers(b1.value)">
+      <input type="button" name="b2" value="2" onClick="calcNumbers(b2.value)">
+      <input type="button" name="b3" value="3" onClick="calcNumbers(b3.value)">
+      <input type="button" name="mulbtn" value="*" onClick="calcNumbers(mulbtn.value)">
+    </div>
+    
+    <div class="row">
+    <input type="button" name="b0" value="0" onClick="calcNumbers(b0.value)">
+      <input type="button" name="dotbtn" value="." onClick="calcNumbers(dotbtn.value)">
+      <input type="button" name="divbtn" value="/" onClick="calcNumbers(divbtn.value)">
+      <input type="button" class="red" value="=" onClick="equalTo()">
+    </div>
+    </div>
+    
+    </form>
+    </div>
+  </div>
+     </body>
+</html>
