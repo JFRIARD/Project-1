@@ -11,7 +11,7 @@
 </head>
 <body onload="startTime()">
   <div id="container1">
-    <div id="containerCalcHono">
+    <div id="containerCalcHono" class="firstContainer">
       <div id="firstHalf">
   <form id="form1">
     <label for="valeur_bien">Valeur du bien :</label>
@@ -35,32 +35,13 @@
 </div>
   <!--date/time clock-->
   <div id="clockdate">
-    <div class="clockdate-wrapper">
+    <div id="clockdate-wrapper" class="firstContainer">
       <div id="clock"></div>
       <div id="date"></div>
     </div>
   </div>
-  <div id="weatherall">
-    <i id="weather-icon" class=""></i>
-    <div id="weather">{{.Temperature}}°</div>
-    <div id="humidity">{{.Humidity}}%</div>
-    <div id="description">{{.Description}}</div>
-  </div>
-  <script>
-    var weatherIcon = document.getElementById("weather-icon");
-  var weatherDesc = "{{.Description}}";
-  if (weatherDesc.includes("peu nuageux")) {
-    weatherIcon.classList.add("wi-cloud");
-  } else if (weatherDesc.includes("rain")) {
-    weatherIcon.classList.add("wi-rain");
-  } else if (weatherDesc.includes("snow")) {
-    weatherIcon.classList.add("wi-snow");
-  } else {
-    weatherIcon.classList.add("wi-day-sunny");
-  }
-  </script>
   <!--first calculator-->
-    <div class="container">
+    <div id="container" class="firstContainer">
     <form id="calcForm">
     <div class="display">
     <input type="text" placeholder="" name="displayResult">
@@ -100,5 +81,23 @@
     </form>
     </div>
   </div>
+  <div id="weatherCard">
+  <section class="top-banner">
+    <div class="containerx">
+      <h1 class="heading" style="margin-top: 0px;"
+      >Simple Weather App</h1>
+      <form>
+        <input type="text" placeholder="Search for a city" autofocus>
+        <button type="submit">SUBMIT</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+  <section class="ajax-section">
+    <div class="containerx">
+      <ul class="cities"></ul>
+    </div>
+  </section>
+</div>
      </body>
 </html>
