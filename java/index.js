@@ -62,3 +62,5 @@ function calcul(event) {
   const result = document.getElementById("result");
   result.innerHTML = `Le prix frais de notaire inclus est de: ${frais_notaire.toFixed(0)}€`
 }
+
+//

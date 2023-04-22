@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./statics/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
     <script src="./java/index.js"></script>
 </head>
 <body onload="startTime()">
@@ -40,6 +40,25 @@
       <div id="date"></div>
     </div>
   </div>
+  <div id="weatherall">
+    <i id="weather-icon" class=""></i>
+    <div id="weather">{{.Temperature}}°</div>
+    <div id="humidity">{{.Humidity}}%</div>
+    <div id="description">{{.Description}}</div>
+  </div>
+  <script>
+    var weatherIcon = document.getElementById("weather-icon");
+  var weatherDesc = "{{.Description}}";
+  if (weatherDesc.includes("peu nuageux")) {
+    weatherIcon.classList.add("wi-cloud");
+  } else if (weatherDesc.includes("rain")) {
+    weatherIcon.classList.add("wi-rain");
+  } else if (weatherDesc.includes("snow")) {
+    weatherIcon.classList.add("wi-snow");
+  } else {
+    weatherIcon.classList.add("wi-day-sunny");
+  }
+  </script>
   <!--first calculator-->
     <div class="container">
     <form id="calcForm">
